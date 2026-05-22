@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  route-planner:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: route-planner
+    ports:
+      - "3003:80"
+    restart: unless-stopped
